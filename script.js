@@ -1,4 +1,4 @@
-const API_KEY= env.NEWS_API_KEY;
+const API_KEY= '{{ site.env.NEWS_API_KEY }}';
 
 const url= "https://newsapi.org/v2/everything?q=";
 const queryUpdate= document.getElementById("query-update");
