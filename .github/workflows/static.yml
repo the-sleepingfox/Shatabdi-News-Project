@@ -1,8 +1,6 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
-env:
-  NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -43,3 +41,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        env:
+          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
